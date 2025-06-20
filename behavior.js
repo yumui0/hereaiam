@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const heart = document.createElement('div');
             heart.innerHTML = '💜';
             heart.style.position = 'absolute';
-            heart.style.top = '-20px';
+            heart.style.top = '20px';
             heart.style.left = Math.random() * 100 + 'vw';
             heart.style.fontSize = (Math.random() * 20 + 10) + 'px';
             heart.style.opacity = Math.random() * 0.5 + 0.5;
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             setTimeout(() => {
                 heart.remove();
-            }, 6000);
+            }, 60000);
         }
       const style = document.createElement('style');
         style.textContent = `
@@ -76,35 +76,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
 
-        function createS() {
-            const S = document.createElement('div');
-            S.innerHTML = '˖🪼';
-            S.style.position = 'absolute';
-            S.style.top = '-20px';
-            S.style.left = Math.random() * 100 + 'vw';
-            S.style.fontSize = (Math.random() * 20 + 10) + 'px';
-            S.style.opacity = Math.random() * 0.5 + 0.5;
-            S.style.animation = `fall ${Math.random() * 3 + 2}s linear forwards`;
-            welcomeOverlay.appendChild(S);
-
-            setTimeout(() => {
-                S.remove();
-            }, 6000);
-        }
-      const style = document.createElement('style');
-        style.textContent = `
-            @keyframes fall {
-                to {
-                    transform: translateY(100vh) rotate(360deg);
-                    opacity: 0;
-                }
-            }
-        `;
-        document.head.appendChild(style);
-
-        for (let i = 0; i < 15; i++) {
-            setTimeout(createS, i * 300);
-        }
 
         const closeBtn = document.createElement('button');
         closeBtn.textContent = 'Heyy!';
