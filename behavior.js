@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const heart = document.createElement('div');
             heart.innerHTML = '💜';
             heart.style.position = 'absolute';
-            heart.style.top = '20px';
+            heart.style.top = '-20px';
             heart.style.left = Math.random() * 100 + 'vw';
             heart.style.fontSize = (Math.random() * 20 + 10) + 'px';
             heart.style.opacity = Math.random() * 0.5 + 0.5;
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             setTimeout(() => {
                 heart.remove();
-            }, 60000);
+            }, (5000);
         }
       const style = document.createElement('style');
         style.textContent = `
