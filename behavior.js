@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
         welcomeOverlay.id = 'welcomeOverlay';
 
         const welcomeText = document.createElement('h1');
-        welcomeText.textContent = "Welcome to Sabrine's journey!;";
+        welcomeText.textContent = "Welcome to Sabrine's journey!";
         welcomeText.style.fontSize = '2.5rem';
         welcomeText.style.marginBottom = '20px';
         welcomeText.style.textShadow = '0 0 10pxrgb(200, 7, 248)';
@@ -58,7 +58,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
             setTimeout(() => {
                 heart.remove();
-            }, 5000);
+            }, 6000);
+        }
+
+        function createS() {
+            const S = document.createElement('div');
+            S.innerHTML = '˖🪼';
+            S.style.position = 'absolute';
+            S.style.top = '-20px';
+            S.style.left = Math.random() * 100 + 'vw';
+            S.style.fontSize = (Math.random() * 20 + 10) + 'px';
+            S.style.opacity = Math.random() * 0.5 + 0.5;
+            S.style.animation = `fall ${Math.random() * 3 + 2}s linear forwards`;
+            welcomeOverlay.appendChild(S);
+
+            setTimeout(() => {
+                S.remove();
+            }, 6000);
         }
 
         const style = document.createElement('style');
