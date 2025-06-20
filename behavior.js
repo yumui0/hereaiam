@@ -60,6 +60,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 heart.remove();
             }, 6000);
         }
+      const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fall {
+                to {
+                    transform: translateY(100vh) rotate(360deg);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        for (let i = 0; i < 15; i++) {
+            setTimeout(createHeart, i * 300);
+        }
+
 
         function createS() {
             const S = document.createElement('div');
@@ -76,8 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 S.remove();
             }, 6000);
         }
-
-        const style = document.createElement('style');
+      const style = document.createElement('style');
         style.textContent = `
             @keyframes fall {
                 to {
@@ -89,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.head.appendChild(style);
 
         for (let i = 0; i < 15; i++) {
-            setTimeout(createHeart, i * 300);
+            setTimeout(createS, i * 300);
         }
 
         const closeBtn = document.createElement('button');
