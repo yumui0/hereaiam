@@ -494,4 +494,48 @@ h1 {
 .share-btn:hover::after {
   opacity: 1;
 }
-
+@media (max-width: 600px) {
+@media (max-width: 600px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+  }
+  .header-content h1 {
+    font-size: 2em !important;
+    margin-bottom: 10px;
+  }
+  #Click_me {
+    width: 90px;
+    height: 90px;
+    margin: 10px auto;
+  }
+  header ul {
+    font-size: 1em;
+    flex-direction: column;
+    gap: 0;
+  }
+  .github-section .github,
+  .github-section img.github {
+    width: 80px !important;
+    height: 80px !important;
+    margin-bottom: 10px;
+  }
+  .github-section {
+    padding: 20px 5px;
+  }
+  #hidden-text {
+    position: relative;
+    top: 0;
+    right: 0;
+    background-color: #19022e;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: none;
+    width: 150px;
+    z-index: 100;
+  }
+}
+} 
