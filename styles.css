@@ -13,14 +13,6 @@ body {
     display: inline-block;
     overflow: hidden;
 }
-
-.typewriter::after {
-    content: '|';
-    position: absolute;
-    right: -5px;
-    color: var(--purple-accent);
-    animation: blink 0.7s infinite;
-}
 @media (max-width: 600px) {
     body {
         padding: 10px;
@@ -66,7 +58,6 @@ body {
 }
 
 .continuous-typewriter::after {
-    content: '|';
     position: absolute;
     right: -5px;
     color:var(--purple-accent);
@@ -276,6 +267,7 @@ aside {
     object-fit: contain;
 }
 
+
 .github-modal-close {
     position: absolute;
     top: 20px;
@@ -309,7 +301,7 @@ aside {
 }
 
 .github {
-    height: 300px;
+    height: 230px;
     transition: transform 0.3s ease;
     margin-bottom: 15px;
     display: block;
@@ -528,4 +520,15 @@ aside {
 
 .share-btn:hover::after {
   opacity: 1;
+}
+@media (max-width: 600px) {
+  .github-section .github,
+  .github-section img.github {
+    width: 80px !important;
+    height: 80px !important;
+    margin-bottom: 10px;
+  }
+  .github-section {
+    padding: 20px 5px;
+  }
 }
